@@ -33,4 +33,14 @@ describe ScheduledMessage do
       expect(ScheduledMessage.active).to match_array([nil_end_date, future_end_date])
     end
   end
+
+  describe '.quarterly' do
+    it 'should display messages with the "quarterly" message_time_frame' do
+      ScheduledMessage.destroy_all
+      onboarding_message = create(:scheduled_message, message_time_frame: :onboarding)
+      quarterly_message = create(:scheduled_message, message_time_frame: :quarterly)
+
+      expect(ScheduledMessage.quarterly).to match_array([quarterly_message])
+    end
+  end
 end
