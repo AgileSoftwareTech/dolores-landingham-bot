@@ -2,6 +2,8 @@ require "business_time"
 
 class QuarterlyMessageDayVerifier
 
+  attr_reader :date, :current_year
+
   DEFAULT_MONTH_DAYS_TO_SEND_ON = [ [1,1], [4,1], [10,1], [7,1] ]
 
   def initialize(date: Time.today)
@@ -32,6 +34,5 @@ class QuarterlyMessageDayVerifier
       NextWorkingDayFinder.run(date)
     end
   end
-
 
 end

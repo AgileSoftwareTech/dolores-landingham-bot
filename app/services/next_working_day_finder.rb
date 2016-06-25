@@ -2,6 +2,8 @@ require "business_time"
 
 class NextWorkingDayFinder
 
+  attr_reader :date
+
   def self.run(date = Time.today)
     self.new(date).run
   end
@@ -15,6 +17,4 @@ class NextWorkingDayFinder
     @date
   end
 
-
 end
-

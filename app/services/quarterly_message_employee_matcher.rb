@@ -47,6 +47,4 @@ class QuarterlyMessageEmployeeMatcher
     Time.now.year
   end
 
-
-
 end
