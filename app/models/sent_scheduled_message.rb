@@ -13,7 +13,7 @@ class SentScheduledMessage < ActiveRecord::Base
   delegate :slack_username, to: :employee
 
   def self.by_year(year)
-    where("extract(year from created_at) = ?", year)
+    where('extract(year from created_at) = ?', year)
   end
 
   def self.filter(params)

@@ -1,4 +1,4 @@
-require "business_time"
+require 'business_time'
 
 class MessageEmployeeMatcher
   def initialize(message)
