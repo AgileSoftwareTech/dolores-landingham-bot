@@ -42,10 +42,6 @@ describe QuarterlyMessageEmployeeMatcher do
 
   #helpers
 
-  def time_zone_from_offset(offset)
-    ActiveSupport::TimeZone.new(offset).name
-  end
-
   def wed_april_1_nine_am_utc
     Time.parse("2015-4-1 09:00:00 UTC")
   end

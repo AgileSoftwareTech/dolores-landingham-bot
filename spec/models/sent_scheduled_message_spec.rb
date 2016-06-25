@@ -37,7 +37,7 @@ describe SentScheduledMessage do
   end
 
   describe "Scopes" do
-    describe "self.by_year" do 
+    describe ".by_year" do 
       it "should select records created in the given year" do
         older = create(:sent_scheduled_message, created_at: Date.parse('1-4-2015'))
         newer = create(:sent_scheduled_message, created_at: Date.parse('1-4-2016'))
