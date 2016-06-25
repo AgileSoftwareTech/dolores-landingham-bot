@@ -23,7 +23,8 @@ class MessageEmployeeMatcher
 
   def retrieve_employees_needing_onboarding_message
     Employee.where(started_on: day_count.business_days.ago).select do |employee|
-      time_to_send_message?(employee.time_zone) && onboarding_message_not_already_sent?(employee)
+      time_to_send_message?(employee.time_zone) &&
+        onboarding_message_not_already_sent?(employee)
     end
   end
 
